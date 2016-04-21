@@ -21,4 +21,20 @@ char *strrev(char *str) {
 	return newString;
 }
 
+int isPalindrome(char *str){
+
+	if(str == NULL) {
+		return -1;
+	}
+
+	int len = strlen(str) - 1;
+
+	for(int i = 0; i < len; i++, len--){
+		if(str[i] != str[len]){
+			return 0;
+		}
+	}	
+	return 1;	
+}
+
 
